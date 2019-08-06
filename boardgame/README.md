@@ -1,22 +1,38 @@
-# React Bootstrap with Material Design
-MDBootstrap for React
+# Jellyfish!
 
-## Getting Started
-To test, contribute or just see what we did follow few easy steps:
-- clone the repository
-- cd to the directory with the repository
-- run `yarn install` (or `npm install` if you don't use yarn)
-- run the app using `yarn start` (or `npm start`)
-- to build project use `yarn run build` (od `npm run build`)
-- `yarn run remove-demo` (or `npm run remove-demo`) removes demo app pages
-- enjoy!
+# Getting Started
+Clone off git, run npm, start mongod and GO!
 
-## Bugs
-If you want to report a bug or submit your idea feel fre to open an issue
+# Prerequisites
+Node.js, npm, mongoDB
 
-Before you report a bug, please take your time to find if an issue hasn't been reported yet
+# Overview
 
-We're also open to pull requests
 
-## Something Missing?
-If you still have some questions do not hesitate to ask us. Open an issue or [visit our Slack](https://mdbbetatest.slack.com)
+# Deployment
+Navigate to https://github.com/aaaronmiller/newsScraper to clone.
+
+# Built With
+Visual Studio Code, HTML, CSS, Javascript, JQuery, Bootstrap, Node.js, Express, Handlebars, MongoDB, Mongoose, Axios, Cheerio
+
+# Versioning
+We use github for version control (https://github.com/your/project/tags).
+
+# In development
+
+
+# Author
+Aaron Miller, Keil Aloia, Heon Lee, David Li
+
+# License
+This project is not licensed.
+
+# Acknowledgments
+
+Joe Rehfuss
+
+Trae Shanks
+
+Lan Truong
+
+James Hanley
