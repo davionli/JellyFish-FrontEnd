@@ -3,10 +3,10 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBInput } from 'mdbreac
 
 const Login = () => {
   return (
-    <MDBContainer>
+    <div>
     <br></br>
       <MDBRow>
-        {/* <MDBCol></MDBCol> */}
+        <MDBCol></MDBCol>
         <MDBCol md="6">
           <MDBCard
             className="card-image"
@@ -61,7 +61,7 @@ const Login = () => {
         </MDBCol>
         <MDBCol></MDBCol>
       </MDBRow>
-    </MDBContainer>
+    </div>
   );
 }
 

@@ -16,7 +16,7 @@ class Navbar extends Component {
 
     render() {
         return (
-            <Router>
+            <div>
                 <MDBNavbar color="indigo" dark expand="md">
                     <MDBNavbarBrand>
                         <strong className="white-text">BoardGame Parties</strong>
@@ -25,16 +25,16 @@ class Navbar extends Component {
                     <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
                         <MDBNavbarNav right>
                             <MDBNavItem active>
-                                <MDBNavLink to="#!"><i class="fas fa-home"></i>Home</MDBNavLink>
+                                <MDBNavLink to="/"><i class="fas fa-home"></i>Home</MDBNavLink>
+                            </MDBNavItem>
+                            <MDBNavItem>
+                                <MDBNavLink to="/dashboard"><i class="fas fa-chess-rook"></i>My Game</MDBNavLink>
                             </MDBNavItem>
                             <MDBNavItem>
                                 <MDBNavLink to="#!"><i class="fas fa-chess-knight"></i>Find A Game</MDBNavLink>
                             </MDBNavItem>
                             <MDBNavItem>
-                                <MDBNavLink to="#!"><i class="fas fa-chess-rook"></i>My Game</MDBNavLink>
-                            </MDBNavItem>
-                            <MDBNavItem>
-                                <MDBNavLink to="#!"><i class="far fa-newspaper"></i>News!</MDBNavLink>
+                                <MDBNavLink to="#!"><i class="far fa-newspaper"></i>News</MDBNavLink>
                             </MDBNavItem>
                             <MDBNavItem>
                                 <MDBNavLink to="#!"><i class="far fa-address-card"></i>Profile</MDBNavLink>
@@ -64,7 +64,7 @@ class Navbar extends Component {
                         </MDBNavbarNav> */}
                     </MDBCollapse>
                 </MDBNavbar>
-            </Router>
+            </div>
         );
     }
 }
