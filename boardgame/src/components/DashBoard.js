@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBBadge, MDBContainer } from "mdbreact";
 import GameCard from "./GameCard";
+import CreateModal from './CreateModal';
 
 export default function DashBoard() {
     return (
@@ -14,7 +15,7 @@ export default function DashBoard() {
                 </div>
             </div>
             <div>
-                <h1><MDBBadge color="primary">My</MDBBadge> Hosted Game</h1>
+                <h1><MDBBadge color="primary">My</MDBBadge> Hosted Game  <CreateModal /></h1>
                 <div className="d-flex flex-row">
                     <GameCard />
                     <GameCard />

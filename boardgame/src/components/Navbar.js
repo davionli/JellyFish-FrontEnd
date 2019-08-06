@@ -3,7 +3,6 @@ import {
     MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
     MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
 } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
 
 class Navbar extends Component {
     state = {
