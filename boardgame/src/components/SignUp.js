@@ -3,7 +3,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBInput } from 'mdbreac
 
 const SignUp = () => {
   return (
-    <div>
+    <MDBContainer>
     <br></br>
       <MDBRow>
         <MDBCol></MDBCol>
@@ -53,7 +53,7 @@ const SignUp = () => {
         </MDBCol>
         <MDBCol></MDBCol>
       </MDBRow>
-    </div>
+    </MDBContainer>
   );
 }
 

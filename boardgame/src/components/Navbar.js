@@ -30,7 +30,7 @@ class Navbar extends Component {
                                 <MDBNavLink to="/dashboard"><i class="fas fa-chess-rook"></i>My Game</MDBNavLink>
                             </MDBNavItem>
                             <MDBNavItem>
-                                <MDBNavLink to="#!"><i class="fas fa-chess-knight"></i>Find A Game</MDBNavLink>
+                                <MDBNavLink to="/find-game"><i class="fas fa-chess-knight"></i>Find A Game</MDBNavLink>
                             </MDBNavItem>
                             <MDBNavItem>
                                 <MDBNavLink to="#!"><i class="far fa-newspaper"></i>News</MDBNavLink>
