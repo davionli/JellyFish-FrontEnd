@@ -21,7 +21,7 @@ const SignUp = () => {
               <div className="text-center">
                 <h3 className="white-text mb-5 mt-4 font-weight-bold">
                   <strong>SIGN</strong>
-                  <a href="#!" className="green-text font-weight-bold">
+                  <a href="#!" className="#1565c0-text font-weight-bold">
                     <strong> UP</strong>
                   </a>
                 </h3>
@@ -31,7 +31,7 @@ const SignUp = () => {
               <MDBRow className="d-flex align-items-center mb-4">
                 <div className="text-center mb-3 col-md-12">
                   <MDBBtn
-                    color="success"
+                    color="#1565c0 blue darken-3"
                     rounded
                     type="button"
                     className="btn-block z-depth-1"
@@ -43,7 +43,7 @@ const SignUp = () => {
               <MDBCol md="12">
                 <p className="font-small white-text d-flex justify-content-end">
                 Already have an accout?
-                  <a href="/" className="green-text ml-1 font-weight-bold">
+                  <a href="/" className="#1565c0-text ml-1 font-weight-bold">
                     Log in
                   </a>
                 </p>

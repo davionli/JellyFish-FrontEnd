@@ -21,7 +21,11 @@ class App extends Component {
 
     return (
       <Router>
-        <div>
+        <div style={{
+          backgroundImage:
+            "url(https://i.ibb.co/BVy8Qwt/bluebb.jpg)",
+       
+        }}>
           <Navbar/>
           <Switch>
             <MDBContainer>

@@ -12,9 +12,9 @@ const Login = () => {
             className="card-image"
             style={{
               backgroundImage:
-                "url(https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/chess-white-king-in-check-mate-position-adrian-pope.jpg)",
+                "url(https://i.ibb.co/CbxQtDM/chess.jpg)",
               backgroundSize: "100% 100%",
-              width: "28rem"
+              width: "28rem",
             }}
           >
             <div className="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
