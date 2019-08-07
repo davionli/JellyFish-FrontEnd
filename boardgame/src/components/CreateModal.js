@@ -23,40 +23,54 @@ render() {
             <MDBInputGroup
                 material
                 containerClassName="mb-2 mt-0"
-                prepend="Event title"
+                prepend="Title"
+                hint="Event Title"
             />
             <MDBInputGroup
                 material
                 containerClassName="mb-2 mt-0"
-                prepend="Boardgame"
+                prepend="Name"
                 hint="The Name Of The Boardgame"
             />
             <MDBInputGroup
                 material
                 containerClassName="mb-2 mt-0"
-                prepend="Event Date"
-                hint="MM/DD/YYYY"
+                prepend="Capacity"
+                hint="Maximum Number of People"
+                type="number"
+            />
+            <div className="d-flex flex-row">
+                <MDBInputGroup
+                    material
+                    containerClassName="mb-2 mt-0"
+                    prepend="Event Date"
+                    hint="MM/DD/YYYY"
+                />
+                <MDBInputGroup
+                    material
+                    containerClassName="mb-2 mt-0"
+                    prepend="Start Time"
+                    hint="HH:MM"
+                />
+            </div>
+            <MDBInputGroup
+                material
+                containerClassName="mb-2 mt-0"
+                prepend="Location"
+                hint="Street Address"
             />
             <MDBInputGroup
                 material
                 containerClassName="mb-2 mt-0"
-                prepend="Default"
+                prepend="'\u2002'"
+                hint="Room/Apt. Number"
             />
             <MDBInputGroup
                 material
                 containerClassName="mb-2 mt-0"
-                prepend="Default"
-            />
-            <MDBInputGroup
-                material
-                containerClassName="mb-2 mt-0"
-                prepend="Default"
-            />
-            <MDBInputGroup
-                material
-                containerClassName="mb-2 mt-0"
-                prepend="Default"
+                prepend="Description"
                 type="textarea"
+                hint="Extra Information"
             />
 
         </MDBModalBody>
