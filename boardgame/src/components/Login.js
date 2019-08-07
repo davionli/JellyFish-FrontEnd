@@ -107,6 +107,7 @@ class Login extends React.Component {
                     Forgot
                   <a href="#!" className="green-text ml-1 font-weight-bold">
                       Password?
+
                   </a>
                   </p>
                 </MDBCol>
