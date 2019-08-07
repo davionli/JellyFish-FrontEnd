@@ -35,19 +35,19 @@ class SignUp extends React.Component {
   }
 
   handlesubmit(event) {
-    axios.post('http://localhost:8080/createaccount', {
+    axios.post("http://localhost:8080/createaccount"||'http://localhost:8080/createaccount', {
       username: this.state.username,
       password: this.state.password
     })
-      .then(function (response) {
-        console.log(response);
-        if (!response.data) {
-          alert("wrong username or password")
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    .then(function (response) {
+    console.log(response);
+    if (!response.data) {
+        alert("wrong username or password")
+    }
+    })
+    .catch(function (error) {
+    console.log(error);
+    });
     console.log("adfadf");
   }
   render() {

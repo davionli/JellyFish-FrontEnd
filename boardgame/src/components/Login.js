@@ -1,13 +1,16 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBInput } from 'mdbreact';
+import { Redirect, withRouter } from "react-router-dom";
 import axios from 'axios';
+import DashBoard from "./DashBoard";
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      redirectPath: ""
     };
 
     this.usernameHandler = this.usernameHandler.bind(this);
@@ -16,7 +19,11 @@ class Login extends React.Component {
 
 
   }
-
+  renderRedirect = () => {
+    return (
+        <Redirect to="/dashboard"/>
+    )
+  }
   usernameHandler(event)
   {
     this.setState(
@@ -37,21 +44,24 @@ class Login extends React.Component {
   }
 
   handlesubmit(event) {
-    axios.put('http://localhost:8080/login', {
-        username: this.state.username,
-        password: this.state.password
-    })
-    .then(function (response) {
-      console.log(response);
-      if(!response.data)
-      {
-        alert("wrong username or password")
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-    console.log("adfadf");
+    // axios.put("http://localhost:8080/createaccount"||'http://localhost:8080/login', {
+    //     username: this.state.username,
+    //     password: this.state.password
+    // })
+    // .then(function (response) {
+    //   console.log(response);
+    //   if(!response.data)
+    //   {
+    //     alert("wrong username or password")
+    //   } else {
+    //     renderRedirect();
+    //   }
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
+    // console.log("adfadf");
+    this.renderRedirect();
   }
   render() {
 
@@ -74,9 +84,7 @@ class Login extends React.Component {
                 <div className="text-center">
                   <h3 className="white-text mb-5 mt-4 font-weight-bold">
                     <strong>LOG</strong>
-                    <a href="#!" className="green-text font-weight-bold">
-                      <strong> IN</strong>
-                    </a>
+                    <strong className="green-text font-weight-bold"> IN</strong>
                   </h3>
                 </div>
                 <MDBInput label="Your email" group icon="user" type="text" validate onChange={this.usernameHandler}/>
@@ -107,7 +115,6 @@ class Login extends React.Component {
                     Forgot
                   <a href="#!" className="green-text ml-1 font-weight-bold">
                       Password?
-
                   </a>
                   </p>
                 </MDBCol>
