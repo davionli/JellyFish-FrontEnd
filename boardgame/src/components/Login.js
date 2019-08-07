@@ -1,13 +1,76 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBInput } from 'mdbreact';
+import { Redirect, withRouter } from "react-router-dom";
+import axios from 'axios';
+import DashBoard from "./DashBoard";
 
-const Login = () => {
-  return (
-    <div>
-      <br></br>
-      <MDBRow>
-        <MDBCol></MDBCol>
-        <MDBCol md="6">
+class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: "",
+      redirectPath: ""
+    };
+
+    this.usernameHandler = this.usernameHandler.bind(this);
+    this.passwordHandler = this.passwordHandler.bind(this);
+    this.handlesubmit = this.handlesubmit.bind(this);
+
+
+  }
+  renderRedirect = () => {
+    return (
+        <Redirect to="/dashboard"/>
+    )
+  }
+  usernameHandler(event)
+  {
+    this.setState(
+      {
+        username: event.target.value
+      }
+    )
+    console.log(this.state.username)
+  }
+  passwordHandler(event)
+  {
+    this.setState(
+      {
+        password: event.target.value
+      }
+    )
+    console.log(this.state.username)
+  }
+
+  handlesubmit(event) {
+    // axios.put("http://localhost:8080/createaccount"||'http://localhost:8080/login', {
+    //     username: this.state.username,
+    //     password: this.state.password
+    // })
+    // .then(function (response) {
+    //   console.log(response);
+    //   if(!response.data)
+    //   {
+    //     alert("wrong username or password")
+    //   } else {
+    //     renderRedirect();
+    //   }
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
+    // console.log("adfadf");
+    this.renderRedirect();
+  }
+  render() {
+
+    return (
+      <div>
+        <br></br>
+        <MDBRow>
+          <MDBCol></MDBCol>
+          <MDBCol md="6">
           <MDBCard
             className="card-image"
             style={{
@@ -40,31 +103,33 @@ const Login = () => {
                   >
                     LOG IN
                   </MDBBtn>
-                </div>
-              </MDBRow>
-              <MDBCol md="12">
-                <p className="font-small white-text d-flex justify-content-end">
-                  Don't have an account?
-                  <a href="/sign-up" className="red-text ml-1 font-weight-bold">
-                    Sign up
+                  </div>
+                </MDBRow>
+                <MDBCol md="12">
+                  <p className="font-small white-text d-flex justify-content-end">
+                    Don't have an account?
+                  <a href="/sign-up" className="green-text ml-1 font-weight-bold">
+                      Sign up
                   </a>
-                </p>
-              </MDBCol>
-              <MDBCol md="12">
-                <p className="font-small white-text d-flex justify-content-end">
-                  Forgot
-                  <a href="#!" className="red-text ml-1 font-weight-bold">
-                    Password?
+                  </p>
+                </MDBCol>
+                <MDBCol md="12">
+                  <p className="font-small white-text d-flex justify-content-end">
+                    Forgot
+                  <a href="#!" className="green-text ml-1 font-weight-bold">
+                      Password?
                   </a>
-                </p>
-              </MDBCol>
-            </div>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol></MDBCol>
-      </MDBRow>
-    </div>
-  );
+                  </p>
+                </MDBCol>
+              </div>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol></MDBCol>
+        </MDBRow>
+      </div>
+    );
+  }
+
 }
 
 export default Login;

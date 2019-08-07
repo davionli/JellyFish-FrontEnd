@@ -1,18 +1,68 @@
+import axios from 'axios';
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBInput } from 'mdbreact';
 
-const SignUp = () => {
-  return (
-    <div>
-    <br></br>
-      <MDBRow>
-        <MDBCol></MDBCol>
-        <MDBCol md="6">
-          <MDBCard
-            className="card-image"
-            style={{
+class SignUp extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
+
+    this.usernameHandler = this.usernameHandler.bind(this);
+    this.passwordHandler = this.passwordHandler.bind(this);
+    this.handlesubmit = this.handlesubmit.bind(this);
+
+  }
+
+  usernameHandler(event) {
+    this.setState(
+      {
+        username: event.target.value
+      }
+    )
+    console.log(this.state.username)
+  }
+  passwordHandler(event) {
+    this.setState(
+      {
+        password: event.target.value
+      }
+    )
+    console.log(this.state.username)
+  }
+
+  handlesubmit(event) {
+    axios.post("http://localhost:8080/createaccount"||'http://localhost:8080/createaccount', {
+      username: this.state.username,
+      password: this.state.password
+    })
+    .then(function (response) {
+    console.log(response);
+    if (!response.data) {
+        alert("wrong username or password")
+    }
+    })
+    .catch(function (error) {
+    console.log(error);
+    });
+    console.log("adfadf");
+  }
+  render() {
+
+    return (
+      <div>
+        <br></br>
+        <MDBRow>
+          <MDBCol></MDBCol>
+          <MDBCol md="6">
+            <MDBCard
+              className="card-image"
+              style={{
                 backgroundImage:
-                    "url(https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/chess-white-king-in-check-mate-position-adrian-pope.jpg)",
+                  "url(https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/chess-white-king-in-check-mate-position-adrian-pope.jpg)",
                 backgroundSize: "100% 100%",
                 width: "28rem"
             }}
@@ -46,15 +96,17 @@ const SignUp = () => {
                   <a href="/" className="#1565c0-text ml-1 font-weight-bold">
                     Log in
                   </a>
-                </p>
-              </MDBCol>
-            </div>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol></MDBCol>
-      </MDBRow>
-    </div>
-  );
+                  </p>
+                </MDBCol>
+              </div>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol></MDBCol>
+        </MDBRow>
+      </div>
+    );
+  }
+
 }
 
 export default SignUp;
