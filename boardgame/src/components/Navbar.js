@@ -19,7 +19,7 @@ class Navbar extends Component {
             <div>
                 <MDBNavbar color="#283593 indigo darken-3" dark expand="md">
                     <MDBNavbarBrand>
-                        <strong className="white-text title">BoardGames With "Friends"</strong>
+                        <strong className="white-text title">Board Games With "Friends"</strong>
                     </MDBNavbarBrand>
                     <MDBNavbarToggler onClick={this.toggleCollapse} />
                     <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
