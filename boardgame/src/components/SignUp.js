@@ -2,18 +2,6 @@ import axios from 'axios';
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBInput } from 'mdbreact';
 
-<<<<<<< HEAD
-const SignUp = () => {
-  return (
-    <MDBContainer>
-    <br></br>
-      <MDBRow>
-        <MDBCol></MDBCol>
-        <MDBCol md="6">
-          <MDBCard
-            className="card-image"
-            style={{
-=======
 class SignUp extends React.Component {
 
   constructor(props) {
@@ -47,19 +35,19 @@ class SignUp extends React.Component {
   }
 
   handlesubmit(event) {
-    axios.post('http://localhost:8080/createaccount', {
+    axios.post("http://localhost:8080/createaccount"||'http://localhost:8080/createaccount', {
       username: this.state.username,
       password: this.state.password
     })
-      .then(function (response) {
-        console.log(response);
-        if (!response.data) {
-          alert("wrong username or password")
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    .then(function (response) {
+    console.log(response);
+    if (!response.data) {
+        alert("wrong username or password")
+    }
+    })
+    .catch(function (error) {
+    console.log(error);
+    });
     console.log("adfadf");
   }
   render() {
@@ -73,7 +61,6 @@ class SignUp extends React.Component {
             <MDBCard
               className="card-image"
               style={{
->>>>>>> f456a0026e5b55f70fcbabb2f3fa246429231ffd
                 backgroundImage:
                   "url(https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/chess-white-king-in-check-mate-position-adrian-pope.jpg)",
                 backgroundSize: "100% 100%",
@@ -110,17 +97,6 @@ class SignUp extends React.Component {
                   <a href="/" className="green-text ml-1 font-weight-bold">
                       Log in
                   </a>
-<<<<<<< HEAD
-                </p>
-              </MDBCol>
-            </div>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol></MDBCol>
-      </MDBRow>
-    </MDBContainer>
-  );
-=======
                   </p>
                 </MDBCol>
               </div>
@@ -132,7 +108,6 @@ class SignUp extends React.Component {
     );
   }
 
->>>>>>> f456a0026e5b55f70fcbabb2f3fa246429231ffd
 }
 
 export default SignUp;

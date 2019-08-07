@@ -5,7 +5,6 @@ import SignUp from "./components/SignUp";
 import Dashboard from "./components/DashBoard";
 import FindGame from "./components/FindGame";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import { ReactComponent as Logo } from "./assets/logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Routes from "./Routes";
 
